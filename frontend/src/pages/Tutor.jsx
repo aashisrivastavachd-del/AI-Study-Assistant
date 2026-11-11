@@ -1,4 +1,4 @@
-
+import API_BASE_URL from "../api";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -73,7 +73,7 @@ function Tutor() {
     setAnswer("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/ask", {
+      const response = await fetch(`${API_BASE_URL}/api/ask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

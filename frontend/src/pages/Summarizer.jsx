@@ -1,4 +1,4 @@
-
+import API_BASE_URL from "../api";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -79,7 +79,7 @@ function Summarizer() {
     setSummary("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/summarize", {
+      const response = await fetch(`${API_BASE_URL}/api/summarize`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

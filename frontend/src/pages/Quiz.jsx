@@ -1,4 +1,4 @@
-
+import API_BASE_URL from "../api";
 import { useState } from "react";
 import "../App.css";
 
@@ -23,7 +23,7 @@ function Quiz() {
     setSubmitted(false);
 
     try {
-      const response = await fetch("http://localhost:5000/api/quiz", {
+      const response = await fetch(`${API_BASE_URL}/api/quiz`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
